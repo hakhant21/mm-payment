@@ -13,7 +13,7 @@ use Hakhant\Payments\Tests\TestCase;
 |
 */
 
-uses(TestCase::class)->in('Unit', 'Feature');
+uses(TestCase::class)->in(__DIR__);
 
 /*
 |--------------------------------------------------------------------------

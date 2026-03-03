@@ -24,7 +24,7 @@ abstract class BaseRequest implements PaymentRequest
 
     protected function generateNonce(int $length = 32): string
     {
-        return substr(str_shuffle(md5(microtime())), 0, $length);
+        return strtoupper(hash('sha256', uniqid((string) mt_rand(), true))) . substr(str_shuffle('ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'), 0, $length - 64);
     }
 
     public function toArray(): array

@@ -1,0 +1,62 @@
+{
+    "name": "hakhant21/mm-payments",
+    "description": "Laravel Payments Package ",
+    "version": "0.1.0",
+    "keywords": [
+        "hakhant21",
+        "payments",
+        "myanmar",
+        "kbz pay",
+        "mobile banking"
+    ],
+    "homepage": "https://github.com/hakhant21/payments",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Htet Aung Khant",
+            "email": "hakhant21@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0 | ^8.1 | ^8.2 | ^8.3 | ^8.4",
+        "guzzlehttp/guzzle": "^7.0",
+        "illuminate/support": "^10.0 | ^11.0 | ^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.37",
+        "pestphp/pest": "^2.36"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hakhant\\Payments\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hakhant\\Payments\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hakhant\\Payments\\Providers\\PaymentServiceProvider"
+            ],
+            "aliases": {
+                "Payment": "Hakhant\\Payments\\Facades\\Payment"
+            }
+        }
+    }
+}

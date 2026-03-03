@@ -17,6 +17,7 @@ Thumbs.db
 *.sqlite3
 
 # Ignore compiled files
+.phpunit.cache
 *.phpunit.result.cache
 *.phpunit-watcher.cache
 *.phpunit-watcher-junit.xml

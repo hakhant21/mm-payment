@@ -6,10 +6,10 @@ return [
     | Payment Gateway Configuration
     |--------------------------------------------------------------------------
     */
-    'app_id' => env('PAYMENT_APP_ID'),
-    'merchant_code' => env('PAYMENT_MERCHANT_CODE'),
-    'merchant_key' => env('PAYMENT_MERCHANT_KEY'),
-    'notify_url' => env('PAYMENT_NOTIFY_URL'),
+    'app_id' => env('PAYMENT_APP_ID', '1234567890'),
+    'merchant_code' => env('PAYMENT_MERCHANT_CODE', 'MERCHANT123'),
+    'merchant_key' => env('PAYMENT_MERCHANT_KEY', 'SECRETKEY'),
+    'notify_url' => env('PAYMENT_NOTIFY_URL', 'https://yourdomain.com/payment/notify'),
     
     /*
     |--------------------------------------------------------------------------

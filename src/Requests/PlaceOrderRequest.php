@@ -31,7 +31,7 @@ class PlaceOrderRequest extends BaseRequest
 
     public function validate(): bool
     {
-        $required = ['merch_order_id', 'trade_type', 'total_amount', 'title'];
+        $required = ['appid','merch_order_id', 'trade_type', 'total_amount', 'title', 'trans_currency', 'timeout_express'];
         
         foreach ($required as $field) {
             if (empty($this->data[$field])) {

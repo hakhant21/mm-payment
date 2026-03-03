@@ -10,7 +10,7 @@ abstract class BaseRequest implements PaymentRequest
     protected string $appId = '';
     protected string $merchCode = '';
     protected string $notifyUrl = '';
-    protected string $version = '3.0';
+    protected string $version = '1.0';
     protected int $timestamp;
     protected string $nonceStr;
 
@@ -19,7 +19,7 @@ abstract class BaseRequest implements PaymentRequest
         $this->data = $data;
         $this->timestamp = time();
         $this->nonceStr = $this->generateNonce();
-        $this->version = config('payment.defaults.version', '3.0');
+        $this->version = config('payment.defaults.version', '1.0');
     }
 
     protected function generateNonce(int $length = 32): string

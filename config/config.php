@@ -9,7 +9,7 @@ return [
     'app_id' => env('PAYMENT_APP_ID', '1234567890'),
     'merchant_code' => env('PAYMENT_MERCHANT_CODE', 'MERCHANT123'),
     'merchant_key' => env('PAYMENT_MERCHANT_KEY', 'SECRETKEY'),
-    'notify_url' => env('PAYMENT_NOTIFY_URL', 'https://yourdomain.com/payment/notify'),
+    'notify_url' => env('PAYMENT_NOTIFY_URL', 'https://app.hakhant.site/payment/notify'),
     
     /*
     |--------------------------------------------------------------------------
@@ -17,9 +17,9 @@ return [
     |--------------------------------------------------------------------------
     */
     'endpoints' => [
-        'place_order' => env('PAYMENT_PLACE_ORDER_URL', 'https://api.payment.com/gateway/placeorder'),
-        'query_order' => env('PAYMENT_QUERY_ORDER_URL', 'https://api.payment.com/gateway/queryorder'),
-        'refund' => env('PAYMENT_REFUND_URL', 'https://api.payment.com/gateway/refund'),
+        'place_order' => env('PAYMENT_PLACE_ORDER_URL', 'http://api-uat.kbzpay.com/payment/gateway/uat/precreate'),
+        'query_order' => env('PAYMENT_QUERY_ORDER_URL', 'http://api-uat.kbzpay.com/payment/gateway/uat/queryorder'),
+        'refund' => env('PAYMENT_REFUND_URL', 'http://api-uat.kbzpay.com/payment/gateway/uat/queryrefund'),
     ],
 
     /*
@@ -53,7 +53,7 @@ return [
     'defaults' => [
         'currency' => env('PAYMENT_CURRENCY', 'MMK'),
         'timeout_express' => env('PAYMENT_TIMEOUT_EXPRESS', '30m'),
-        'version' => env('PAYMENT_API_VERSION', '3.0'),
+        'version' => env('PAYMENT_API_VERSION', '1.0'),
     ],
 
     /*

@@ -89,7 +89,7 @@ class KbzGateway implements PaymentGateway
             $request = new QueryOrderRequest(['merch_order_id' => $orderId]);
             $request->setAppId($this->config['app_id']);
             $request->setMerchCode($this->config['merchant_code']);
-            $request->setVersion('3.0');
+            $request->setVersion('1.0');
 
             Log::info('Processing query order', ['order_id' => $orderId]);
 
@@ -207,6 +207,6 @@ class KbzGateway implements PaymentGateway
         
         $string = urldecode(http_build_query($signData)) . '&key=' . $this->config['merchant_key'];
         
-        return strtoupper(md5($string));
+        return strtoupper(hash('sha256', $string));
     }
 }
